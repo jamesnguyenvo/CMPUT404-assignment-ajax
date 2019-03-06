@@ -37,7 +37,7 @@ class World:
     def __init__(self):
         self.clear()
         
-    def update(self, entity, key, value):
+    def s(self, entity, key, value):
         entry = self.space.get(entity,dict())
         entry[key] = value
         self.space[entity] = entry
@@ -74,11 +74,13 @@ def flask_post_json():
 @app.route("/")
 def hello():
     '''Return something coherent here.. perhaps redirect to /static/index.html '''
-    return None
+    # stackoverflow redirect using flask 
+    return redirect("/static/index.html", code=301)
 
 @app.route("/entity/<entity>", methods=['POST','PUT'])
 def update(entity):
     '''update the entities via this interface'''
+    data = flask_post_json()
     return None
 
 @app.route("/world", methods=['POST','GET'])    
