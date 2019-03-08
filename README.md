@@ -12,4 +12,14 @@ Contributors / Licensing
 
 Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle.
 
+To Run:
+========================
+* type into console:
+  * source venv/bin/activate 
+  * python freetests.py
+  
+server.py, index.html contains contributions from:
+
+* Abram Hindle
+* James Vo
 
